@@ -1,5 +1,7 @@
 #include "ros/ros.h"
+#include "dynamic_reconfigure/client.h"
 #include "std_msgs/String.h"
+#include "freenect_camera/FreenectConfig.h"
 
 int main(int argc, char **argv) {
     // Initialize the ROS node with the name "image_mode_monitor"
@@ -7,20 +9,27 @@ int main(int argc, char **argv) {
     ros::NodeHandle nh;
 
     // Define the parameter name
-    std::string param_name = "/kinect_head/driver/image_mode";
+    std::string param_name = "/kinect_head/driver";
+
+    ROS_INFO("Waiting for the parameter %s to be available", param_name.c_str());
+    // Dynamic reconfigure client for the Kinect driver
+    dynamic_reconfigure::Client<freenect_camera::FreenectConfig> client("/kinect_head/driver");
 
     // Run the node at a rate of 1 Hz
     ros::Rate loop_rate(1);
 
     while (ros::ok()) {
-        int image_mode;
+        freenect_camera::FreenectConfig config;
 
+        ROS_INFO("Checking the parameter %s", param_name.c_str());
         // Check if the parameter exists
-        if (nh.getParam(param_name, image_mode)) {
-            // If the parameter is equal to 2, change it to 1
-            if (image_mode == 2) {
-                nh.setParam(param_name, 1);
-                ROS_INFO("Changed %s from 2 to 1", param_name.c_str());
+        if (client.getCurrentConfiguration(config)) {
+            // Check the image_mode and change it if necessary
+            ROS_INFO("Current image_mode: %d", config.image_mode);
+            if (config.image_mode == 2) {
+                config.image_mode = 1;
+                client.setConfiguration(config);
+                ROS_INFO("Changed image_mode from 2 to 1");
             }
         } else {
             ROS_WARN("Parameter %s not found", param_name.c_str());

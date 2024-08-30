@@ -3,7 +3,7 @@ project(kinect_mode_watchdog)
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
-  roscpp std_msgs
+  roscpp std_msgs dynamic_reconfigure freenect_camera
 )
 
 ###################################

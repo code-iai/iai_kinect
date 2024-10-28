@@ -1,4 +1,4 @@
 <launch>
     <!-- Launch the kinect_mode_watchdog node -->
-    <node name="kinect_mode_watchdog" pkg="kinect_mode_watchdog" type="kinect_mode_watchdog" output="screen"/>
+    <node name="kinect_mode_watchdog" pkg="kinect_mode_watchdog" type="kinect_mode_watchdog.py" output="screen"/>
 </launch>

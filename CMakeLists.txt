@@ -21,6 +21,12 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+# Install Python scripts
+catkin_install_python(PROGRAMS
+  src/kinect_mode_watchdog.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 ## Declare a C++ executable
 add_executable(kinect_mode_watchdog src/kinect_mode_watchdog.cpp)
 target_link_libraries(kinect_mode_watchdog ${catkin_LIBRARIES})

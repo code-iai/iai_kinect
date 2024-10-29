@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>kinect_mode_watchdog</name>
+    <name>iai_kinect_watchdog</name>
     <version>0.0.0</version>
-    <description>The kinect_mode_watchdog package</description>
+    <description>The iai_kinect_watchdog package</description>
 
     <maintainer email="jeroen.schaefer@outlook.de">Jeroen Schäfer</maintainer>
 
     <license>BSD</license>
 
-    <url type="website">https://github.com/code-iai/kinect_mode_watchdog</url>
+    <url type="website">https://github.com/code-iai/iai_kinect</url>
 
     <buildtool_depend>catkin</buildtool_depend>
-    <depend>roscpp</depend>
     <depend>rospy</depend>
     <build_depend>std_msgs</build_depend>
     <build_depend>dynamic_reconfigure</build_depend>

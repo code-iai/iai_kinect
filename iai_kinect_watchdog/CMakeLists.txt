@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(kinect_mode_watchdog)
+project(iai_kinect_watchdog)
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS

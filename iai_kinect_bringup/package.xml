@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>iai_kinect_bringup</name>
+  <version>0.0.0</version>
+  <description>The iai_kinect_bringup package</description>
+
+  <maintainer email="jeroen.schaefer@outlook.de">Jeroen Schäfer</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>iai_kinect_watchdog</build_depend>
+  <build_export_depend>iai_kinect_watchdog</build_export_depend>
+  <exec_depend>iai_kinect_watchdog</exec_depend>
+
+  <export>
+  </export>
+</package>

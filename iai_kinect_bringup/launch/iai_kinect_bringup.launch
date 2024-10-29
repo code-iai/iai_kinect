@@ -1,0 +1,8 @@
+<launch>
+    <!-- Include the openni.launch file from /etc/ros directory -->
+    <include file="/etc/ros/openni_head.launch" />
+
+    <!-- Include the iai_kinect_watchdog launch file -->
+    <include file="$(find iai_kinect_watchdog)/launch/kinect_mode_watchdog.launch" />
+</launch>
+

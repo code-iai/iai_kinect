@@ -3,7 +3,7 @@ project(kinect_mode_watchdog)
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
-  roscpp std_msgs dynamic_reconfigure freenect_camera
+  rospy std_msgs dynamic_reconfigure
 )
 
 ###################################
@@ -28,5 +28,5 @@ catkin_install_python(PROGRAMS
 )
 
 ## Declare a C++ executable
-add_executable(kinect_mode_watchdog src/kinect_mode_watchdog.cpp)
-target_link_libraries(kinect_mode_watchdog ${catkin_LIBRARIES})
+#add_executable(kinect_mode_watchdog src/kinect_mode_watchdog.cpp)
+#target_link_libraries(kinect_mode_watchdog ${catkin_LIBRARIES})

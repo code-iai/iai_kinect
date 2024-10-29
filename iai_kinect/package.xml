@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>iai_kinect</name>
+  <version>0.0.0</version>
+  <description>The iai_kinect package</description>
+
+  <maintainer email="jeroen.schaefer@outlook.de">Jeroen Schäfer</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+  <url type="website">https://github.com/code-iai/iai_kinect/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
+
